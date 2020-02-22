@@ -4,10 +4,10 @@ Ext.define('PCEPR.view.login.Login', {
     autoShow: true,
     height: 180,
     width: 360,
-    // require: [
-    //     'PCEPR.view.login.LoginController'
-    // ],
-    // controller: 'login',
+    require: [
+        'PCEPR.view.login.LoginController'
+    ],
+    controller: 'login',
     layout: {
         type: 'fit',
     },
@@ -20,7 +20,7 @@ Ext.define('PCEPR.view.login.Login', {
     resizable: true,
     items: [{
         xtype: 'form',
-        // reference: 'form',
+        reference: 'form',
         bodyPadding: 15,
         defaults: {
             xtype: 'textfield',
@@ -66,18 +66,18 @@ Ext.define('PCEPR.view.login.Login', {
                 xtype: 'button',
                 iconCls: 'fa fa-times fa-lg',
                 text: 'Cancel',
-                // listeners: {
-                //     click: 'onButtonClickCancel',
-                // }
+                listeners: {
+                    click: 'onButtonClickCancel',
+                }
             },
             {
                 xtype: 'button',
                 text: 'Submit',
                 formBind: true,
                 iconCls: 'fa fa-sign-in fa-lg',
-                // listeners: {
-                //     click: 'onButtonClickSubmit'
-                // }
+                listeners: {
+                    click: 'onButtonClickSubmit'
+                }
             }
         ]
     }]
