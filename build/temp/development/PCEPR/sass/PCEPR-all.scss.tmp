@@ -891,6 +891,7 @@ $include-extthemeneptune-resizer-splitter: true;
 $include-extthemeneptune-toolbar-paging: true;
 $include-extthemeneptune-toolbar-toolbar: true;
 $include-pcepr-application: true;
+$include-pcepr-view-login-login: true;
 $include-pcepr-view-main-main: true;
 $include-pcepr-view-main-maincontroller: true;
 $include-pcepr-view-main-mainmodel: true;
@@ -921,6 +922,14 @@ $current-package: 'ext-theme-neptune';
 $current-resource-root: $ext-theme-neptune-resource-root;
 $relative-image-path-for-uis: $ext-theme-neptune-resource-path;
 @import '../../../../../ext/packages/ext-theme-neptune/sass/etc/all';
+
+/* including package PCEPR */
+$PCEPR-resource-root: '' !default;
+$PCEPR-resource-path: 'images' !default;
+$current-package: false;
+$current-resource-root: $PCEPR-resource-root;
+$relative-image-path-for-uis: $PCEPR-resource-path;
+@import '../../../../../sass/etc/all';
 
 
 /* ======================== VAR ======================== */

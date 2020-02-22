@@ -14,5 +14,34 @@ Ext.define('PCEPR.Application', {
 
     launch: function () {
         // TODO - Launch the application
+        var me = this;
+        var task = new Ext.util.DelayedTask(function(){
+            me.splashscreen.fadeOut({
+                duration: 1000,
+                remove: true
+            });
+
+            me.splashscreen.next().fadeOut({
+                duration:1000,
+                remove: true,
+                listeners: {
+                    afteranimate: function(el, startTime, eopts){
+                        Ext.widget('login-dialog');
+                    }
+                }
+            });
+        });
+        task.delay(2000);
+    },
+    init : function(){
+        var me = this;
+        me.splashscreen = Ext.getBody().mask(
+            'Please wait! Loading Application...', 'splashscreen'
+        );
+        /** this code is  used for loading an image */
+        me.splashscreen.addCls('splashscreen');
+        // Ext.DomHelper.insertFirst(Ext.query('.x-mask-msg')[0], {
+        //     cls : 'x-splash-icon'
+        // });
     }
 });

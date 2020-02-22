@@ -7,8 +7,9 @@ Ext.application({
     name: 'PCEPR',
 
     extend: 'PCEPR.Application',
-
-    autoCreateViewport: 'PCEPR.view.main.Main'
+    autoCreateViewport: false,
+    
+    // autoCreateViewport: 'PCEPR.view.main.Main'
 
     //-------------------------------------------------------------------------
     // Most customizations should be made to PCEPR.Application. If you need to
