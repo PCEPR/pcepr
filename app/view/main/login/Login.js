@@ -30,9 +30,9 @@ Ext.define('PCEPR.view.login.Login', {
             vtype: 'alphanum',
             minLength: 3,
             msgTarget: 'under',
-            // listeners: {
-            //     specialKey: 'onTextFieldSpecialKey'
-            // }
+            listeners: {
+                specialKey: 'onTextFieldSpecialKey'
+            }
         },
         items: [{
                 name: 'user',
@@ -47,12 +47,12 @@ Ext.define('PCEPR.view.login.Login', {
                     // vtype : 'customPass',
                     // msgTarget : 'under',
                 maxLength: 15,
-                // id: 'password',
-                // enableKeyEvents: true,
-                // listeners: {
-                //     keypress: 'onTextFieldKeyPress',
-                //     specialKey: 'onTextFieldSpecialKey'
-                // }
+                id: 'password',
+                enableKeyEvents: true,
+                listeners: {
+                    keypress: 'onTextFieldKeyPress',
+                    specialKey: 'onTextFieldSpecialKey'
+                }
             }
         ]
     }],

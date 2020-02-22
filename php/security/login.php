@@ -16,18 +16,18 @@ if($resultDb = $mysqli->query($sql)){
     $count = $resultDb->num_rows;
     if($count == 1){
         $record = $resultDb->fetch_assoc();
-        if(PassHash::check_password($record['password'], $pass)){
+        if(Passhash::compare( $pass,$record['password'])){
             $_SESSION['authenticated'] = "yes";
             $_SESSION['username'] = $userName;
             $result['success'] = true;
-            $result['msg'] = "user authenticated!";
+            $result['msg'] = 'user authenticated!';
         }else{
             $result['success'] = false;
             $result['msg'] = 'Incorrect password';
         }
     }else{
         $result['success'] = false;
-        $result['msg'] = 'Incorrect user or password'
+        $result['msg'] = 'Incorrect user or password';
     }
     $resultDb->close();
 }

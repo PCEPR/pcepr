@@ -13,7 +13,7 @@ Ext.define('PCEPR.Application', {
     ],
 
     launch: function () {
-        // TODO - Launch the application
+        Ext.tip.QuickTipManager.init();
         var me = this;
         var task = new Ext.util.DelayedTask(function(){
             me.splashscreen.fadeOut({
