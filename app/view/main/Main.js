@@ -1,4 +1,3 @@
-
 Ext.define('PCEPR.view.main.Main', {
     extend: 'Ext.container.Container',
     requires: [
@@ -7,8 +6,8 @@ Ext.define('PCEPR.view.main.Main', {
     ],
 
     xtype: 'app-main',
-    autoShow: true,
     controller: 'main',
+    plugins: 'viewport',
     viewModel: {
         type: 'main'
     },

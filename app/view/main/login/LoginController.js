@@ -59,8 +59,7 @@ Ext.define('PCEPR.view.login.LoginController', {
         }
     },
     onLoginSuccess: function (form, action) {
-        this.getView().close();
-        Ext.create('PCEPR.view.main.Main');
-        console.log('ddd');
+        this.getView().destroy();
+        Ext.widget('app-main');
     }
 });
