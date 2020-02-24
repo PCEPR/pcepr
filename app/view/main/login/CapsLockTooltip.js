@@ -1,5 +1,8 @@
 Ext.define('PCEPR.view.login.CapsLockTooltip', {
     extend: 'Ext.tip.QuickTip',
+    requires: [
+        'PCEPR.view.locale.Translation'
+    ],
     xtype: 'capslocktooltip',
     target: 'password',
     anchor: 'top',
@@ -7,6 +10,9 @@ Ext.define('PCEPR.view.login.CapsLockTooltip', {
     width: 300,
     dismissDelay: 0,
     autoHide: false,
-    title: '<div class="fa fa-exclamation-triangle"> Caps Lock is On</div>',
-    html: '<div>Having Caps Lock on may cause you to enter ' + 'your password incorrectly.</div><br/>' + '<div>You should press Caps Lock to turn it off ' + 'before entering your password.</div>'
+    title: '<div class="fa fa-exclamation-triangle">'+translations.capsLockTitle+'</div>',
+    html: '<div>'+translations.capsLockMsg1 + ' '+ translations.capsLockMsg2 +'.</div><br/>' + translations.capsLockMsg3 + ' ' + translations.capsLockMsg4+'</div>'
 });
+
+
+

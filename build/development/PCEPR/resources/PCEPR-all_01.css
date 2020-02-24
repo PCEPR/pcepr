@@ -3134,12 +3134,24 @@
 .buttonIcon {
   color: white; }
 
-/* line 3, ../../../../sass/etc/all.scss */
+/* line 1, ../../../../sass/etc/flagIcons.scss */
+.pt_BR {
+  background-image: url("images/app/flags/br.png") !important; }
+
+/* line 5, ../../../../sass/etc/flagIcons.scss */
+.en {
+  background-image: url("images/app/flags/us.png") !important; }
+
+/* line 9, ../../../../sass/etc/flagIcons.scss */
+.eth {
+  background-image: url("images/app/flags/eth.png") !important; }
+
+/* line 4, ../../../../sass/etc/all.scss */
 .x-mask.splashscreen {
   background-color: white;
   opacity: 1; }
 
-/* line 10, ../../../../sass/etc/all.scss */
+/* line 11, ../../../../sass/etc/all.scss */
 .x-mask-msg.splashscreen,
 .x-mask-msg.splashscreen div {
   font-size: 16px;
@@ -3149,11 +3161,11 @@
   background-color: transparent;
   background-position: top center; }
 
-/* line 24, ../../../../sass/etc/all.scss */
+/* line 25, ../../../../sass/etc/all.scss */
 .x-message-box .x-window-body .x-box-inner {
   min-height: 110px !important; }
 
-/* line 28, ../../../../sass/etc/all.scss */
+/* line 29, ../../../../sass/etc/all.scss */
 .x-splash-icon {
   background-image: url("images/app/packt-logo.png") !important;
   margin-top: -30px;
@@ -24642,28 +24654,3 @@ a.x-color-picker-item:hover {
   background-image: -o-linear-gradient(top, #2a81c1, #1374bb 50%, #126eb1 51%, #1374bb);
   background-image: -ms-linear-gradient(top, #2a81c1, #1374bb 50%, #126eb1 51%, #1374bb);
   background-image: linear-gradient(top, #2a81c1, #1374bb 50%, #126eb1 51%, #1374bb); }
-
-/* line 528, ../../../../ext/packages/ext-theme-neutral/sass/src/button/Button.scss */
-.x-btn-over.x-btn-grid-cell-small {
-  border-color: #1064a1;
-  background-image: none;
-  background-color: #1374bb;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #2a81c1), color-stop(50%, #1374bb), color-stop(51%, #126eb1), color-stop(100%, #1374bb));
-  background-image: -webkit-linear-gradient(top, #2a81c1, #1374bb 50%, #126eb1 51%, #1374bb);
-  background-image: -moz-linear-gradient(top, #2a81c1, #1374bb 50%, #126eb1 51%, #1374bb);
-  background-image: -o-linear-gradient(top, #2a81c1, #1374bb 50%, #126eb1 51%, #1374bb);
-  background-image: -ms-linear-gradient(top, #2a81c1, #1374bb 50%, #126eb1 51%, #1374bb);
-  background-image: linear-gradient(top, #2a81c1, #1374bb 50%, #126eb1 51%, #1374bb); }
-
-/* line 553, ../../../../ext/packages/ext-theme-neutral/sass/src/button/Button.scss */
-.x-btn-menu-active.x-btn-grid-cell-small,
-.x-btn-pressed.x-btn-grid-cell-small {
-  border-color: #0d5183;
-  background-image: none;
-  background-color: #157fcc;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #157fcc), color-stop(50%, #1378c1), color-stop(51%, #157fcc), color-stop(100%, #2c8bd1));
-  background-image: -webkit-linear-gradient(top, #157fcc, #1378c1 50%, #157fcc 51%, #2c8bd1);
-  background-image: -moz-linear-gradient(top, #157fcc, #1378c1 50%, #157fcc 51%, #2c8bd1);
-  background-image: -o-linear-gradient(top, #157fcc, #1378c1 50%, #157fcc 51%, #2c8bd1);
-  background-image: -ms-linear-gradient(top, #157fcc, #1378c1 50%, #157fcc 51%, #2c8bd1);
-  background-image: linear-gradient(top, #157fcc, #1378c1 50%, #157fcc 51%, #2c8bd1); }

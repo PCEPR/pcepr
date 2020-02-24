@@ -4,15 +4,15 @@ Ext.define('PCEPR.view.login.Login', {
     autoShow: true,
     height: 180,
     width: 360,
-    require: [
-        'PCEPR.view.login.LoginController'
+    requires: [
+         'PCEPR.view.locale.Translation'
     ],
     controller: 'login',
     layout: {
         type: 'fit',
     },
     iconCls: 'fa fa-key fa-lg',
-    title: 'Login',
+    title: translations.login,
     closeAction: 'hide',
     closable: false,
     constrain: true,
@@ -36,13 +36,13 @@ Ext.define('PCEPR.view.login.Login', {
         },
         items: [{
                 name: 'user',
-                fieldLabel: 'User:',
+                fieldLabel:translations.user,
                 maxLength: 25
             },
             {
                 inputType: 'password',
                 name: 'password',
-                fieldLabel: 'Password:',
+                fieldLabel: translations.password,
                 /** not for the login page */
                     // vtype : 'customPass',
                     // msgTarget : 'under',
@@ -59,20 +59,24 @@ Ext.define('PCEPR.view.login.Login', {
     dockedItems: [{
         xtype: 'toolbar',
         dock: 'bottom',
-        items: [{
+        items: [
+            {
+                xtype : 'translation'
+            },
+            {
                 xtype: 'tbfill'
             },
             {
                 xtype: 'button',
                 iconCls: 'fa fa-times fa-lg',
-                text: 'Cancel',
+                text: translations.cancel,
                 listeners: {
                     click: 'onButtonClickCancel',
                 }
             },
             {
                 xtype: 'button',
-                text: 'Submit',
+                text: translations.submit,
                 formBind: true,
                 iconCls: 'fa fa-sign-in fa-lg',
                 listeners: {

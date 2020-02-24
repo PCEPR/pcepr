@@ -1,10 +1,6 @@
 Ext.define('PCEPR.view.main.Header', {
     extend: 'Ext.toolbar.Toolbar',
     xtype: 'appheader',
-    requires: [
-        PCEPR.view.locale.Translation,
-        PCEPR.view.main.MainModel
-    ],
     ui: 'footer',
     items: [
     {

@@ -894,6 +894,7 @@ $include-pcepr-application: true;
 $include-pcepr-util-sessionmonitor: true;
 $include-pcepr-util-util: true;
 $include-pcepr-view-locale-translation: true;
+$include-pcepr-view-locale-translationcontroller: true;
 $include-pcepr-view-login-capslocktooltip: true;
 $include-pcepr-view-login-login: true;
 $include-pcepr-view-login-logincontroller: true;

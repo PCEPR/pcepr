@@ -32,9 +32,9 @@ Ext.define('PCEPR.util.SessionMonitor', {
       buttons: [{
         text: 'Continue Working',
         handler: function() {
-          Ext.TaskManager.stop(Packt.util.SessionMonitor.countDownTask);
-          Packt.util.SessionMonitor.window.hide();
-          Packt.util.SessionMonitor.start();
+          Ext.TaskManager.stop(PCEPR.util.SessionMonitor.countDownTask);
+          PCEPR.util.SessionMonitor.window.hide();
+          PCEPR.util.SessionMonitor.start();
           // 'poke' the server-side to update your session.
           Ext.Ajax.request({
             url: 'user/sessionAlive.php'
@@ -44,8 +44,8 @@ Ext.define('PCEPR.util.SessionMonitor', {
         text: 'Logout',
         action: 'logout',
         handler: function() {
-          Ext.TaskManager.stop(Packt.util.SessionMonitor.countDownTask);
-          Packt.util.SessionMonitor.window.hide();
+          Ext.TaskManager.stop(PCEPR.util.SessionMonitor.countDownTask);
+          PCEPR.util.SessionMonitor.window.hide();
           // find and invoke your app's "Logout" button.
           Ext.ComponentQuery.query('button#logout')[0].fireEvent('click',Ext.ComponentQuery.query('button#logout')[0]);
         }

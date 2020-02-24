@@ -3,6 +3,20 @@
  * Ext.application(). This is the ideal place to handle application launch and initialization
  * details.
  */
+function loadLocale(){
+  
+    var lang = localStorage ? (localStorage.getItem('user-lang') || 'en') : 'en', file = Ext.util.Format.format("resources/locale/{0}.js", lang);
+    var extJsFile = Ext.util.Format.format("ext/packages/ext-locale/build/ext-locale-{0}.js", lang);
+    Ext.Loader.loadScript({url: extJsFile});
+    Ext.Loader.loadScript({
+        url : file,
+        onError : function(){
+            alert('Error loading locale file. please contact system admin.');
+            console.log(lang);
+        }
+    });
+}
+loadLocale();
 Ext.define('PCEPR.Application', {
     extend: 'Ext.app.Application',
 

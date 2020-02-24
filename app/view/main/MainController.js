@@ -2,7 +2,8 @@ Ext.define('PCEPR.view.main.MainController', {
     extend: 'Ext.app.ViewController',
 
     requires: [
-        'PCEPR.util.Util'
+        'PCEPR.util.Util',
+        'PCEPR.view.login.Login'
     ],
 
     alias: 'controller.main',
@@ -20,10 +21,12 @@ Ext.define('PCEPR.view.main.MainController', {
         PCEPR.util.Util.showErrorMsg(conn.responseText);
     },
     onLogoutSuccess: function (conn, response, options, eOpts) {
-        var result = PCEPR.util.Util.decodeJSON(conn.responseText);
+        console.log(conn);
+        var result = PCEPR.util.Util.decodeJson(conn.responseText);
         if (result.success) {
             this.getView().destroy();
-            window.location.reload();
+            Ext.widget('login-dialog');
+            // window.location.reload();
         } else {
             PCEPR.util.Util.showErrorMsg(result.msg);
         }
