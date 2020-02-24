@@ -1,0 +1,11 @@
+$PCEPR-footer-text-color: rgb(11, 103, 196);
+
+.app-footer-title {
+    color: $PCEPR-footer-text-color;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.app-footer {
+    border-top: 1px solid darken($PCEPR-footer-text-color, 15);
+}

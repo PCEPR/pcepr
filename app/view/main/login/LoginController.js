@@ -4,7 +4,8 @@ Ext.define('PCEPR.view.login.LoginController', {
     requires : [
         'PCEPR.view.login.CapsLockTooltip',
         'PCEPR.util.Util',
-        'PCEPR.view.main.Main'
+        'PCEPR.view.main.Main',
+        'PCEPR.util.SessionMonitor'
     ],
     onTextFieldSpecialKey: function (field, e, options) {
         if(e.getKey() === e.ENTER){
@@ -61,5 +62,6 @@ Ext.define('PCEPR.view.login.LoginController', {
     onLoginSuccess: function (form, action) {
         this.getView().destroy();
         Ext.widget('app-main');
+        PCEPR.util.SessionMonitor.start();
     }
 });

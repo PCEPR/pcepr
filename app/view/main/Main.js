@@ -1,6 +1,9 @@
 Ext.define('PCEPR.view.main.Main', {
     extend: 'Ext.container.Container',
     requires: [
+        'PCEPR.view.main.Header',
+        'PCEPR.view.main.Footer',
+        'PCEPR.view.main.Panel',
         'PCEPR.view.main.MainController',
         'PCEPR.view.main.MainModel'
     ],
@@ -17,24 +20,22 @@ Ext.define('PCEPR.view.main.Main', {
     },
 
     items: [{
-        xtype: 'panel',
-        bind: {
-            title: '{name}'
-        },
-        region: 'west',
-        html: '<ul><li>This area is commonly used for navigation, for example, using a "tree" component.</li></ul>',
-        width: 250,
-        split: true,
-        tbar: [{
-            text: 'Button',
-            handler: 'onClickButton'
-        }]
-    },{
-        region: 'center',
-        xtype: 'tabpanel',
-        items:[{
-            title: 'Tab 1',
-            html: '<h2>Content appropriate for the current navigation.</h2>'
-        }]
-    }]
+        xtype : 'mainpanel',
+        region: 'center'
+    },
+    {
+        xtype : 'appheader',
+        region : 'north'
+    },
+    {
+        xtype : 'appfooter',
+        region : 'south'
+    },
+    {
+        xtype : 'container',
+        region : 'west',
+        width : 200,
+        split : true
+    }
+    ]
 });
