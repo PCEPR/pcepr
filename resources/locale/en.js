@@ -21,15 +21,15 @@ translations = {
 	menu13 : 'Profile',
 
 	staticData: 'Static Data',
-	actors: 'Actors',
+	actors: 'ITems',
 	categories: 'Categories',
 	languages: 'Languages',
-	cities: 'Cities',
-	countries: 'Countries',
+	cities: 'Labours',
+	countries: 'Equipments',
 	cms: 'Content Management',
-	films: 'Films',
+	films: 'Panels',
 	reports: 'Reports',
-	salesfilmcategory: 'Sales by Film Category',
+	salesfilmcategory: 'Generate report',
 	mailclient: 'MailClient',
 	mail: 'Mail'
 }

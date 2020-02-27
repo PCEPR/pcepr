@@ -6,16 +6,6 @@ Ext.define('PCEPR.view.menu.Accordion', {
         type: 'accordion',
         multi: true
     },
-    items: [{
-        title: 'Cost Estimation',
-        html: 'Panel content!'
-    },{
-        title: 'Database Management',
-        html: 'Panel content!'
-    },{
-        title: 'Scheduling',
-        html: 'Panel content!'
-    }],
     collapsible: true,
     split: true,
     iconCls: 'fa fa-sitemap fa-lg',

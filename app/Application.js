@@ -17,8 +17,11 @@ loadLocale();
 
 Ext.define('PCEPR.Application', {
     extend: 'Ext.app.Application',
-
     name: 'PCEPR',
+    glyphFontFamily: 'FontAwesome',
+    requires: [
+        'PCEPR.overrides.tree.ColumnOverride'
+    ],
     views: [
     ],
     controllers: [
