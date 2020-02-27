@@ -7,10 +7,5 @@ Ext.define('PCEPR.view.main.Panel', {
         closable: false,
         iconCls: 'fa fa-home fa-lg tabIcon',
         title: 'Home'
-    },{
-        xtype : 'panel',
-        closable : true,
-        iconCls: 'fa fa-user fa-lg tabIcon',
-        title : 'User'
     }]
 });

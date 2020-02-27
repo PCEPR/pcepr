@@ -14,6 +14,7 @@ translations = {
 	capsLockMsg4: 'your password.',
 
 	//Menus
+	menu:'menu',
 	menu1 : 'Security',
 	menu11 : 'Groups and Permissions',
 	menu12 : 'Users',

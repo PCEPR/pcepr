@@ -5,7 +5,7 @@ Ext.define('PCEPR.view.login.Login', {
     height: 180,
     width: 360,
     requires: [
-         'PCEPR.view.locale.Translation'
+         'PCEPR.view.locale.Translation',
     ],
     controller: 'login',
     layout: {

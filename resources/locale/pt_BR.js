@@ -5,7 +5,8 @@ translations = {
 
 	cancel: "Cancelar",
 	submit: "Enviar",
-	logout: 'Logout',
+	logout: 'Logoutpt',
+	
 
 	capsLockTitle: 'Caps Lock está ativada',
 	capsLockMsg1: 'Se Caps lock estiver ativado, isso pode fazer com que você',

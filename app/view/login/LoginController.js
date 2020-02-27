@@ -60,8 +60,10 @@ Ext.define('PCEPR.view.login.LoginController', {
         }
     },
     onLoginSuccess: function (form, action) {
-        this.getView().destroy();
-        Ext.widget('app-main');
+        var view = this.getView();
+        view.unmask();
+        view.close();
+        Ext.create('PCEPR.view.main.Main');
         PCEPR.util.SessionMonitor.start();
     }
 });

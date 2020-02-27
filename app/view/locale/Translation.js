@@ -1,36 +1,36 @@
 Ext.define('PCEPR.view.locale.Translation', {
     extend: 'Ext.button.Split',
-    alias: 'widget.translation',
-    requires : [
+    xtype: 'translation',
+
+    requires: [
         'PCEPR.view.locale.TranslationController'
     ],
-    controller : 'translation',
-    menu: Ext.create('Ext.menu.Menu', {
+
+    controller: 'translation',
+
+    menu: {
+        xtype: 'menu',
+        defaults:{
+            listeners: {
+                click: 'onMenuItemClick'
+            }
+        },
         items: [
             {
                 xtype: 'menuitem',
                 iconCls: 'en',
-                text: 'English',
-                listeners:{
-                    click : 'onMenuItemClick'
-                }
+                text: 'English'
             },
             {
                 xtype: 'menuitem',
                 iconCls: 'eth',
-                text: 'Ethiopia',
-                listeners:{
-                    click : 'onMenuItemClick'
-                }
+                text: 'Ethiopia'
             },
             {
                 xtype: 'menuitem',
                 iconCls: 'pt_BR',
-                text: 'Português',
-                listeners:{
-                    click : 'onMenuItemClick'
-                }
+                text: 'Português'
             }
         ]
-    })
+    }
 });

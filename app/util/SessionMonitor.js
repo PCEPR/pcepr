@@ -37,7 +37,7 @@ Ext.define('PCEPR.util.SessionMonitor', {
           PCEPR.util.SessionMonitor.start();
           // 'poke' the server-side to update your session.
           Ext.Ajax.request({
-            url: 'user/sessionAlive.php'
+            url: 'php/sessionAlive.php'
           });
         }
       },{

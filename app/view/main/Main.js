@@ -1,20 +1,20 @@
 Ext.define('PCEPR.view.main.Main', {
     extend: 'Ext.container.Container',
+    plugins: 'viewport',
+    xtype: 'app-main',
     requires: [
         'PCEPR.view.main.Header',
         'PCEPR.view.main.Footer',
         'PCEPR.view.main.Panel',
         'PCEPR.view.main.MainController',
-        'PCEPR.view.main.MainModel'
+        'PCEPR.view.main.MainModel',
+        'PCEPR.view.menu.Accordion',
     ],
 
-    xtype: 'app-main',
     controller: 'main',
-    plugins: 'viewport',
     viewModel: {
         type: 'main'
     },
-
     layout: {
         type: 'border'
     },
@@ -32,10 +32,8 @@ Ext.define('PCEPR.view.main.Main', {
         region : 'south'
     },
     {
-        xtype : 'container',
+        xtype : 'mainmenu',
         region : 'west',
-        width : 200,
-        split : true
-    }
+    },
     ]
 });

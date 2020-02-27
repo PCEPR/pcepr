@@ -13,11 +13,14 @@ Ext.define('PCEPR.view.locale.TranslationController', {
             button.setText('Português');
         }
     },
-    onMenuItemClick: function (item, e, options) {
-        var menu = this.getView();
-        menu.setIconCls(item.iconCls);
-        menu.setText(item.text);
-        localStorage.setItem("user-lang", item.iconCls);
-        window.location.reload();
+    onMenuItemClick: function(item, e, options){
+        var button = this.getView();
+        if (button.iconCls !== item.iconCls)
+        {
+            button.setIconCls(item.iconCls);
+            button.setText(item.text);
+            localStorage.setItem("user-lang", item.iconCls);
+            window.location.reload();
+        }
     }
 });

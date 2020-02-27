@@ -1,6 +1,10 @@
 Ext.define('PCEPR.view.main.Header', {
     extend: 'Ext.toolbar.Toolbar',
     xtype: 'appheader',
+    requires: [
+        'PCEPR.view.locale.Translation',
+        'PCEPR.view.main.MainController'
+   ],
     ui: 'footer',
     items: [
     {
@@ -21,7 +25,6 @@ Ext.define('PCEPR.view.main.Header', {
     },
     {
         xtype: 'translation',
-        text: "English"
     },
     {
         xtype: 'tbseparator'
@@ -29,7 +32,7 @@ Ext.define('PCEPR.view.main.Header', {
     {
         xtype: 'button',
         itemId: 'logout',
-        text: 'Logout',
+        text: translations.logout,
         reference: 'logout',
         iconCls: 'fa fa-sign-out fa-lg buttonIcon',
         listeners: {

@@ -4,7 +4,7 @@ translations = {
     password: "Contraseña",
     cancel: "Cancelar",
     submit: "Enviar",
-    logout: 'Logout',
+    logout: 'Logouteth',
     capsLockTitle: 'Bloq Mayús está Activado',
     capsLockMsg1: 'Tener el Bloq Mayús activado puede causar que ',
     capsLockMsg2: 'introduzca su contraseña de forma incorrecta.',
