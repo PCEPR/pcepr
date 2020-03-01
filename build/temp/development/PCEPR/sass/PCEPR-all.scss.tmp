@@ -894,8 +894,12 @@ $include-pcepr-application: true;
 $include-pcepr-controller-menu: true;
 $include-pcepr-model-menu-accordion: true;
 $include-pcepr-model-menu-treenode: true;
+$include-pcepr-model-security-base: true;
+$include-pcepr-model-security-group: true;
+$include-pcepr-model-security-user: true;
 $include-pcepr-overrides-tree-columnoverride: true;
 $include-pcepr-store-menu: true;
+$include-pcepr-util-glyphs: true;
 $include-pcepr-util-sessionmonitor: true;
 $include-pcepr-util-util: true;
 $include-pcepr-view-locale-translation: true;
@@ -911,6 +915,11 @@ $include-pcepr-view-main-mainmodel: true;
 $include-pcepr-view-main-panel: true;
 $include-pcepr-view-menu-accordion: true;
 $include-pcepr-view-menu-tree: true;
+$include-pcepr-view-security-user: true;
+$include-pcepr-view-security-usercontroller: true;
+$include-pcepr-view-security-userform: true;
+$include-pcepr-view-security-usermodel: true;
+$include-pcepr-view-security-usersgrid: true;
 
 
 /* ======================== ETC ======================== */
