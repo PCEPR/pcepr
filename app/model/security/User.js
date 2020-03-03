@@ -4,6 +4,7 @@ Ext.define('PCEPR.model.security.User', {
     entityName: 'User',
 
     fields: [
+        {name : 'id', type : 'int'},
         { name: 'name' },
         { name: 'userName' },
         { name: 'email' },
@@ -20,24 +21,24 @@ Ext.define('PCEPR.model.security.User', {
         }
     ],
 
-    // validators: {
-    //     name: [
-    //         { type: 'presence', message: 'This field is mandatory'},
-    //         { type: 'length', min: 3, max: 100}
-    //     ],
-    //     userName: [
-    //         { type: 'exclusion', list: ['Admin', 'Operator'] },
-    //         { type: 'format', matcher: /([a-z]+)/i },
-    //         { type: 'presence', message: 'This field is mandatory'},
-    //         { type: 'length', min: 3, max: 25}
-    //     ],
-    //     email: [
-    //         { type: 'presence', message: 'This field is mandatory'},
-    //         { type: 'length', min: 5, max: 100},
-    //         { type: 'email' }
-    //     ],
-    //     groups_id: 'presence'
-    // },
+    validators: {
+        name: [
+            { type: 'presence', message: 'This field is mandatory'},
+            { type: 'length', min: 3, max: 100}
+        ],
+        userName: [
+            { type: 'exclusion', list: ['Admin', 'Operator'] },
+            { type: 'format', matcher: /([a-z]+)/i },
+            { type: 'presence', message: 'This field is mandatory'},
+            { type: 'length', min: 3, max: 25}
+        ],
+        email: [
+            { type: 'presence', message: 'This field is mandatory'},
+            { type: 'length', min: 5, max: 100},
+            { type: 'email' }
+        ],
+        groups_id: 'presence'
+    },
 
     hasOne: [
         {

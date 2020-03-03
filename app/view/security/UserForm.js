@@ -75,11 +75,11 @@ Ext.define('PCEPR.view.security.UserForm', {
                             forceSelection: true,
                             editable: false,
                             name: 'groups_id',
-                            // bind: {
-                            //     value: '{currentUser.groups_id}',
-                            //     store: '{groups}',
-                            //     selection: '{currentUser.group}'
-                            // }
+                            bind: {
+                                value: '{currentUser.groups_id}',
+                                store: '{groups}',
+                                // selection: '{currentUser.group}'
+                            }
                         },
                         {
                             xtype: 'filefield',

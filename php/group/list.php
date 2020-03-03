@@ -1,23 +1,33 @@
 <?php
 
+require("../db/db.php");
+
 session_start();
-require('../db/db.php');
 
-$sqlQuery = "SELECT * FROM group";
+$sql = 'SELECT * FROM groups';
 
-$permissions = [];
-
-if ($resultDb = $mysqli->query($sqlQuery)) {
-    while($user = $resultDb->fetch_assoc()) {
-        $permissions[] =  $user;
-    }
+if (isset($_GET['id'])) {
+    $id = $_GET['id'];
+    $sql .= ' WHERE id = ' . $id;
 }
+
+$result = array();
+
+if ($resultDb = $mysqli->query($sql)) {
+
+while($profile = $resultDb->fetch_assoc()) {
+$result[] = $profile;
+}
+
+$resultDb->close();
+}
+
+echo json_encode(array(
+"success" => $mysqli->connect_errno == 0,
+"data" => $result
+));
+
+/* close connection */
 $mysqli->close();
-
-echo json_encode(array( "data" => $permissions));
-
-
-// return $permissions;
-
 
 ?>

@@ -4,16 +4,16 @@ function retrievePermissions($userName){
 
     require('../db/db.php');
 
-    $sqlQuery = "SELECT p.menu_id FROM user u ";
+    $sqlQuery = "SELECT p.menu_id menuId FROM user u ";
     $sqlQuery .= "INNER JOIN permissions p ON u.groups_id = p.groups_id ";
     $sqlQuery .= "INNER JOIN menu m ON p.menu_id = m.id ";
-    $sqlQuery .= "WHERE u.userName = '$userName' ";
+    $sqlQuery .= "WHERE u.username = '$userName' ";
 
     $permissions = [];
 
     if ($resultDb = $mysqli->query($sqlQuery)) {
         while($user = $resultDb->fetch_assoc()) {
-            $permissions[] =  $user['menu_id'];
+            $permissions[] =  $user['menuId'];
         }
     }
 
@@ -81,3 +81,5 @@ function retrieveMenuOptions($modules, $permissions){
 
     return $result;
 }
+
+?>
