@@ -10,7 +10,7 @@ if(empty($_SESSION["username"])) {
 
 
 
-$sql = "SELECT * FROM groups";
+$sql = "SELECT * FROM items";
 
 
 $result = array();

@@ -37,7 +37,8 @@ Ext.define('PCEPR.model.security.User', {
             { type: 'length', min: 5, max: 100},
             { type: 'email' }
         ],
-        groups_id: 'presence'
+        groups_id: 'presence',
+        password: 'presence'
     },
 
     hasOne: [

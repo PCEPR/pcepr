@@ -3,7 +3,7 @@ Ext.define('PCEPR.model.Base', {
 
     requires: [
         'PCEPR.util.Util',
-        'PCEPR.ux.data.writer.AssociatedWriter'
+        // 'PCEPR.ux.data.writer.AssociatedWriter'
     ],
 
     schema: {

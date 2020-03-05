@@ -26,8 +26,10 @@ Ext.define('PCEPR.Application', {
     ],
     controllers: [
         'Menu',
+        'StaticData'
     ],
     stores: [
+        'staticData.Items'
     ],
     launch: function () {
         Ext.tip.QuickTipManager.init();

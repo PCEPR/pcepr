@@ -3146,12 +3146,139 @@
 .eth {
   background-image: url("images/app/flags/eth.png") !important; }
 
-/* line 4, ../../../../sass/etc/all.scss */
+/* StatusBar - structure */
+/* line 2, ../../../../sass/etc/ux/statusbar.scss */
+.x-statusbar .x-status-text {
+  cursor: default;
+  /*
+      height: 21px;
+      line-height: 21px;
+      padding: 0 4px;
+  */ }
+
+/* line 10, ../../../../sass/etc/ux/statusbar.scss */
+.x-statusbar .x-status-busy {
+  padding-left: 25px !important;
+  background: transparent no-repeat 3px 0; }
+
+/* line 17, ../../../../sass/etc/ux/statusbar.scss */
+.x-toolbar div.xtb-text
+.x-statusbar .x-status-text-panel {
+  border-top: 1px solid;
+  border-right: 1px solid;
+  border-bottom: 1px solid;
+  border-left: 1px solid;
+  padding: 2px 8px 2px 5px; }
+
+/* StatusBar word processor example styles */
+/* line 27, ../../../../sass/etc/ux/statusbar.scss */
+#word-status .x-status-text-panel .spacer {
+  width: 60px;
+  font-size: 0;
+  line-height: 0; }
+
+/* line 32, ../../../../sass/etc/ux/statusbar.scss */
+#word-status .x-status-busy {
+  padding-left: 25px !important;
+  background: transparent no-repeat 3px 0; }
+
+/* line 36, ../../../../sass/etc/ux/statusbar.scss */
+#word-status .x-status-saved {
+  padding-left: 25px !important;
+  background: transparent no-repeat 3px 0; }
+
+/* StatusBar form validation example styles */
+/* line 43, ../../../../sass/etc/ux/statusbar.scss */
+.x-statusbar .x-status-error {
+  cursor: pointer;
+  padding-left: 25px !important;
+  background: transparent no-repeat 3px 0; }
+
+/* line 48, ../../../../sass/etc/ux/statusbar.scss */
+.x-statusbar .x-status-valid {
+  padding-left: 25px !important;
+  background: transparent no-repeat 3px 0; }
+
+/* line 52, ../../../../sass/etc/ux/statusbar.scss */
+.x-status-error-list {
+  font: 11px tahoma,arial,verdana,sans-serif;
+  position: absolute;
+  z-index: 9999;
+  border-top: 1px solid;
+  border-right: 1px solid;
+  border-bottom: 1px solid;
+  border-left: 1px solid;
+  padding: 5px 10px; }
+
+/* line 62, ../../../../sass/etc/ux/statusbar.scss */
+.x-status-error-list li {
+  cursor: pointer;
+  list-style: disc;
+  margin-left: 10px; }
+
+/* line 67, ../../../../sass/etc/ux/statusbar.scss */
+.x-status-error-list li a {
+  text-decoration: none; }
+
+/* line 70, ../../../../sass/etc/ux/statusbar.scss */
+.x-status-error-list li a:hover {
+  text-decoration: underline; }
+
+/* *********************************************************** */
+/* *********************************************************** */
+/* *********************************************************** */
+/* StatusBar - visual */
+/* line 82, ../../../../sass/etc/ux/statusbar.scss */
+.x-statusbar .x-status-busy {
+  background-image: url(images/statusbar/loading.gif); }
+
+/* line 85, ../../../../sass/etc/ux/statusbar.scss */
+.x-statusbar .x-status-text-panel {
+  border-color: #99bbe8 #fff #fff #99bbe8; }
+
+/* StatusBar word processor example styles */
+/* line 91, ../../../../sass/etc/ux/statusbar.scss */
+#word-status .x-status-text {
+  color: #777; }
+
+/* line 94, ../../../../sass/etc/ux/statusbar.scss */
+#word-status .x-status-busy {
+  background-image: url(images/statusbar/saving.gif); }
+
+/* line 97, ../../../../sass/etc/ux/statusbar.scss */
+#word-status .x-status-saved {
+  background-image: url(images/statusbar/saved.png); }
+
+/* StatusBar form validation example styles */
+/* line 103, ../../../../sass/etc/ux/statusbar.scss */
+.x-statusbar .x-status-error {
+  color: #C33;
+  background-image: url(images/statusbar/exclamation.gif); }
+
+/* line 107, ../../../../sass/etc/ux/statusbar.scss */
+.x-statusbar .x-status-valid {
+  background-image: url(images/statusbar/accept.png); }
+
+/* line 110, ../../../../sass/etc/ux/statusbar.scss */
+.x-status-error-list {
+  border-color: #C33;
+  background: white; }
+
+/* line 114, ../../../../sass/etc/ux/statusbar.scss */
+.x-status-error-list li a {
+  color: #15428B; }
+
+/* line 1, ../../../../sass/etc/ux/LiveSearchGridPanel.scss */
+.x-livesearch-match {
+  font-weight: bold;
+  background-color: yellow; }
+
+/* line 8, ../../../../sass/etc/all.scss */
 .x-mask.splashscreen {
   background-color: white;
   opacity: 1; }
 
-/* line 11, ../../../../sass/etc/all.scss */
+/* line 15, ../../../../sass/etc/all.scss */
 .x-mask-msg.splashscreen,
 .x-mask-msg.splashscreen div {
   font-size: 16px;
@@ -3161,11 +3288,11 @@
   background-color: transparent;
   background-position: top center; }
 
-/* line 25, ../../../../sass/etc/all.scss */
+/* line 29, ../../../../sass/etc/all.scss */
 .x-message-box .x-window-body .x-box-inner {
   min-height: 110px !important; }
 
-/* line 29, ../../../../sass/etc/all.scss */
+/* line 33, ../../../../sass/etc/all.scss */
 .x-splash-icon {
   background-image: url("images/app/packt-logo.png") !important;
   margin-top: -30px;
@@ -24557,100 +24684,3 @@ a.x-color-picker-item:hover {
   /* line 310, ../../../../ext/packages/ext-theme-neutral/sass/src/button/Button.scss */
   .x-btn-icon-top > .x-btn-icon-el-grid-cell-small, .x-btn-icon-bottom > .x-btn-icon-el-grid-cell-small {
     min-width: 16px; }
-  /* line 314, ../../../../ext/packages/ext-theme-neutral/sass/src/button/Button.scss */
-  .x-btn-icon-el-grid-cell-small.x-btn-glyph {
-    font-size: 16px;
-    line-height: 16px;
-    color: white;
-    opacity: 0.5; }
-    /* line 334, ../../../../ext/packages/ext-theme-neutral/sass/src/button/Button.scss */
-    .x-ie8 .x-btn-icon-el-grid-cell-small.x-btn-glyph {
-      color: #8abfe5; }
-  /* line 341, ../../../../ext/packages/ext-theme-neutral/sass/src/button/Button.scss */
-  .x-btn-text.x-btn-icon-left > .x-btn-icon-el-grid-cell-small {
-    margin-right: 0px; }
-    /* line 345, ../../../../ext/packages/ext-theme-neutral/sass/src/button/Button.scss */
-    .x-btn-text.x-btn-icon-left > .x-btn-icon-el-grid-cell-small.x-rtl {
-      margin-right: 0;
-      margin-left: 0px; }
-  /* line 352, ../../../../ext/packages/ext-theme-neutral/sass/src/button/Button.scss */
-  .x-btn-text.x-btn-icon-right > .x-btn-icon-el-grid-cell-small {
-    margin-left: 0px; }
-    /* line 356, ../../../../ext/packages/ext-theme-neutral/sass/src/button/Button.scss */
-    .x-btn-text.x-btn-icon-right > .x-btn-icon-el-grid-cell-small.x-rtl {
-      margin-left: 0;
-      margin-right: 0px; }
-  /* line 363, ../../../../ext/packages/ext-theme-neutral/sass/src/button/Button.scss */
-  .x-btn-text.x-btn-icon-top > .x-btn-icon-el-grid-cell-small {
-    margin-bottom: 5px; }
-  /* line 367, ../../../../ext/packages/ext-theme-neutral/sass/src/button/Button.scss */
-  .x-btn-text.x-btn-icon-bottom > .x-btn-icon-el-grid-cell-small {
-    margin-top: 5px; }
-
-/* line 373, ../../../../ext/packages/ext-theme-neutral/sass/src/button/Button.scss */
-.x-btn-arrow-right > .x-btn-icon.x-btn-no-text.x-btn-button-grid-cell-small {
-  padding-right: 5px; }
-/* line 376, ../../../../ext/packages/ext-theme-neutral/sass/src/button/Button.scss */
-.x-btn-arrow-right > .x-btn-text.x-btn-icon-right > .x-btn-icon-el-grid-cell-small {
-  margin-right: 5px; }
-
-/* line 383, ../../../../ext/packages/ext-theme-neutral/sass/src/button/Button.scss */
-.x-btn-arrow-bottom > .x-btn-button-grid-cell-small,
-.x-btn-split-bottom > .x-btn-button-grid-cell-small {
-  padding-bottom: 3px; }
-
-/* line 389, ../../../../ext/packages/ext-theme-neutral/sass/src/button/Button.scss */
-.x-btn-wrap-grid-cell-small.x-btn-arrow-right:after {
-  width: 8px;
-  padding-right: 8px;
-  background-image: url(images/button/grid-cell-small-arrow.png); }
-/* line 402, ../../../../ext/packages/ext-theme-neutral/sass/src/button/Button.scss */
-.x-btn-wrap-grid-cell-small.x-rtl.x-btn-arrow-right:after {
-  background-image: url(images/button/grid-cell-small-arrow-rtl.png); }
-/* line 411, ../../../../ext/packages/ext-theme-neutral/sass/src/button/Button.scss */
-.x-btn-wrap-grid-cell-small.x-btn-arrow-bottom:after {
-  height: 8px;
-  background-image: url(images/button/grid-cell-small-arrow.png); }
-
-/* line 431, ../../../../ext/packages/ext-theme-neutral/sass/src/button/Button.scss */
-.x-btn-wrap-grid-cell-small.x-btn-split-right:after {
-  width: 14px;
-  padding-right: 14px;
-  background-image: url(images/button/grid-cell-small-s-arrow.png); }
-/* line 440, ../../../../ext/packages/ext-theme-neutral/sass/src/button/Button.scss */
-.x-btn-wrap-grid-cell-small.x-rtl.x-btn-split-right:after {
-  background-image: url(images/button/grid-cell-small-s-arrow-rtl.png); }
-/* line 445, ../../../../ext/packages/ext-theme-neutral/sass/src/button/Button.scss */
-.x-btn-wrap-grid-cell-small.x-btn-split-bottom:after {
-  height: 14px;
-  background-image: url(images/button/grid-cell-small-s-arrow-b.png); }
-
-/* line 472, ../../../../ext/packages/ext-theme-neutral/sass/src/button/Button.scss */
-.x-btn-split-right > .x-btn-icon.x-btn-no-text.x-btn-button-grid-cell-small {
-  padding-right: 5px; }
-/* line 475, ../../../../ext/packages/ext-theme-neutral/sass/src/button/Button.scss */
-.x-btn-split-right > .x-btn-text.x-btn-icon-right > .x-btn-icon-el-grid-cell-small {
-  margin-right: 5px; }
-
-/* line 480, ../../../../ext/packages/ext-theme-neutral/sass/src/button/Button.scss */
-.x-btn-disabled.x-btn-grid-cell-small {
-  background-image: none;
-  background-color: #157fcc;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #2c8bd1), color-stop(50%, #157fcc), color-stop(51%, #1378c1), color-stop(100%, #157fcc));
-  background-image: -webkit-linear-gradient(top, #2c8bd1, #157fcc 50%, #1378c1 51%, #157fcc);
-  background-image: -moz-linear-gradient(top, #2c8bd1, #157fcc 50%, #1378c1 51%, #157fcc);
-  background-image: -o-linear-gradient(top, #2c8bd1, #157fcc 50%, #1378c1 51%, #157fcc);
-  background-image: -ms-linear-gradient(top, #2c8bd1, #157fcc 50%, #1378c1 51%, #157fcc);
-  background-image: linear-gradient(top, #2c8bd1, #157fcc 50%, #1378c1 51%, #157fcc); }
-
-/* line 504, ../../../../ext/packages/ext-theme-neutral/sass/src/button/Button.scss */
-.x-btn-focus.x-btn-grid-cell-small {
-  border-color: #1064a1;
-  background-image: none;
-  background-color: #1374bb;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #2a81c1), color-stop(50%, #1374bb), color-stop(51%, #126eb1), color-stop(100%, #1374bb));
-  background-image: -webkit-linear-gradient(top, #2a81c1, #1374bb 50%, #126eb1 51%, #1374bb);
-  background-image: -moz-linear-gradient(top, #2a81c1, #1374bb 50%, #126eb1 51%, #1374bb);
-  background-image: -o-linear-gradient(top, #2a81c1, #1374bb 50%, #126eb1 51%, #1374bb);
-  background-image: -ms-linear-gradient(top, #2a81c1, #1374bb 50%, #126eb1 51%, #1374bb);
-  background-image: linear-gradient(top, #2a81c1, #1374bb 50%, #126eb1 51%, #1374bb); }

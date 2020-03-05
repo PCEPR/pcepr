@@ -16,12 +16,13 @@ translations = {
 	//Menus
 	menu:'menu',
 	menu1 : 'Security',
-	menu11 : 'Groups and Permissions',
+	menu11 : 'Groups Or Roles',
+	menu111 : 'Permissions',
 	menu12 : 'Users',
 	menu13 : 'Profile',
 
 	staticData: 'Static Data',
-	actors: 'ITems',
+	actors: 'Items',
 	categories: 'Categories',
 	languages: 'Languages',
 	cities: 'Labours',

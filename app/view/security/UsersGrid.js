@@ -27,6 +27,11 @@ Ext.define('PCEPR.view.security.UsersGrid', {
             width: 150,
             dataIndex: 'groupName',
             text: 'Group'
+        },{
+            width : 150,
+            dataIndex : 'password',
+            text : "Password",
+            hidden : true
         }
     ]
 });

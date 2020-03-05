@@ -70,7 +70,6 @@ Ext.define('PCEPR.controller.Menu', {
             });
         }
         mainPanel.setActiveTab(newTab);
-
         // this.redirectTo(record.get('className'));
     },
 

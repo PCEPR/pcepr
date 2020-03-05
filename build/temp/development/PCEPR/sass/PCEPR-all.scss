@@ -892,19 +892,28 @@ $include-extthemeneptune-toolbar-paging: true;
 $include-extthemeneptune-toolbar-toolbar: true;
 $include-pcepr-application: true;
 $include-pcepr-controller-menu: true;
+$include-pcepr-controller-staticdata: true;
 $include-pcepr-model-base: true;
 $include-pcepr-model-textcombo: true;
+$include-pcepr-model-group-group: true;
 $include-pcepr-model-menu-accordion: true;
 $include-pcepr-model-menu-treenode: true;
 $include-pcepr-model-security-base: true;
 $include-pcepr-model-security-group: true;
 $include-pcepr-model-security-user: true;
+$include-pcepr-model-staticdata-base: true;
+$include-pcepr-model-staticdata-items: true;
 $include-pcepr-overrides-tree-columnoverride: true;
 $include-pcepr-store-menu: true;
+$include-pcepr-store-staticdata-base: true;
+$include-pcepr-store-staticdata-items: true;
 $include-pcepr-util-glyphs: true;
 $include-pcepr-util-sessionmonitor: true;
 $include-pcepr-util-util: true;
 $include-pcepr-ux-data-writer-associatedwriter: true;
+$include-pcepr-view-group-groupgrid: true;
+$include-pcepr-view-group-groupmodel: true;
+$include-pcepr-view-group-groups: true;
 $include-pcepr-view-locale-translation: true;
 $include-pcepr-view-locale-translationcontroller: true;
 $include-pcepr-view-login-capslocktooltip: true;
@@ -923,6 +932,8 @@ $include-pcepr-view-security-usercontroller: true;
 $include-pcepr-view-security-userform: true;
 $include-pcepr-view-security-usermodel: true;
 $include-pcepr-view-security-usersgrid: true;
+$include-pcepr-view-staticdata-basegrid: true;
+$include-pcepr-view-staticdata-items: true;
 
 
 /* ======================== ETC ======================== */
