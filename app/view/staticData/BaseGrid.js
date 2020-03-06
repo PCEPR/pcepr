@@ -22,7 +22,7 @@ Ext.define('PCEPR.view.staticData.BaseGrid', {
         me.plugins = [
             {
                 ptype: 'cellediting',
-                clicksToEdit: 1,
+                clicksToEdit: 2,
                 pluginId: 'cellplugin'
             },
             {
@@ -65,6 +65,15 @@ Ext.define('PCEPR.view.staticData.BaseGrid', {
                         itemId: 'clearFilter',
                         text: 'Clear Filters',
                         glyph: PCEPR.util.Glyphs.getGlyph('clearFilter')
+                    },
+                    {
+                        xtype: 'tbfill'
+                    },
+                    {
+                        xtype: 'button',
+                        itemId: 'importitems',
+                        text: 'Import Items From Excel',
+                        glyph: PCEPR.util.Glyphs.getGlyph('importitems')
                     }
                 ]
             }
@@ -95,6 +104,21 @@ Ext.define('PCEPR.view.staticData.BaseGrid', {
                             me.fireEvent('widgetclick', me, btn);
                         }
                     }
+                },
+                {
+                    xtype: 'widgetcolumn',
+                    width: 50,
+                    sortable: false,
+                    menuDisabled: true,
+                    widget: {
+                        xtype: 'button',
+                        glyph: PCEPR.util.Glyphs.getGlyph('view'),
+                        tooltip: 'View Detail',
+                        scope: me,
+                        handler: function (btn) {
+                            me.fireEvent('widgetclickview', me, btn);
+                        }
+                    }
                 }
             ]
         );
@@ -102,7 +126,6 @@ Ext.define('PCEPR.view.staticData.BaseGrid', {
         me.getColumnIndexes = function() {
             var me = this,
                 columnIndexes = [];
-
             Ext.Array.each(me.columns, function (column) {
                 // only validate column with editor
                 if (Ext.isDefined(column.getEditor())) {
@@ -116,7 +139,6 @@ Ext.define('PCEPR.view.staticData.BaseGrid', {
         };
 
         me.validateRow = function(record, rowIndex){
-
             var me = this,
                 view = me.getView(),
                 errors = record.validate();

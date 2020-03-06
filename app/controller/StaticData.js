@@ -3,7 +3,7 @@ Ext.define('PCEPR.controller.StaticData', {
 
     requires: [
         'PCEPR.util.Util',
-        'PCEPR.util.Glyphs'
+        'PCEPR.util.Glyphs',
     ],
 
     stores: [
@@ -12,7 +12,7 @@ Ext.define('PCEPR.controller.StaticData', {
 
     views: [
         'staticData.BaseGrid',
-        'staticData.Items',
+        'staticData.Items'
     ],
 
     init: function (application) {
@@ -24,7 +24,9 @@ Ext.define('PCEPR.controller.StaticData', {
                 render: me.render,
                 edit: me.onEdit,
                 afterrender: me.onAfterRender,
-                widgetclick: me.onWidgetClick
+                widgetclick: me.onWidgetClick,
+                widgetclickview: me.onWidgetClickView
+
             },
             'staticdatagrid button#add': {
                 click: me.onButtonClickAdd
@@ -37,9 +39,6 @@ Ext.define('PCEPR.controller.StaticData', {
             },
             'staticdatagrid button#clearFilter': {
                 click: me.onButtonClickClearFilter
-            },
-            'staticdatagrid actioncolumn': {
-                itemclick: this.handleActionColumn
             },
             'citiesgrid button#clearGrouping': {
                 toggle: me.onButtonToggleClearGrouping
@@ -79,14 +78,7 @@ Ext.define('PCEPR.controller.StaticData', {
             }
         }
     },
-    handleActionColumn: function (column, action, view, rowIndex, colIndex, item, e) {
-        var store = view.up('staticdatagrid').getStore(),
-            rec = store.getAt(rowIndex);
-        if (action == 'delete') {
-            store.remove(rec);
-            Ext.Msg.alert('Delete', 'Save the changes to persistthe removed record.');
-        }
-    },
+
     onEdit: function (editor, context, options) {
         context.record.set('last_update', new Date());
     },
@@ -132,11 +124,102 @@ Ext.define('PCEPR.controller.StaticData', {
 
         var store = grid.getStore(),
             rec = button.getWidgetRecord();
-
         store.remove(rec);
         Ext.Msg.alert('Delete', 'Save the changes to persist the removed record.');
     },
-
+    onWidgetClickView: function (grid, button) {
+        var rec = button.getWidgetRecord();
+        var title = rec.data.items_name;
+        var currentUser = rec.data;
+        console.log(title);
+        var what = Ext.create('Ext.window.Window', {
+            height: 600,
+            width: 700,
+            layout: {
+                type: 'fit'
+            },
+            title: title,
+            autoScroll: true,
+            closable: true,
+            modal: true,
+            items: [
+                {
+                    bodyPadding: 5,
+                    modelValidation: true,
+                    autoScroll: true,
+                    layout: {
+                        type: 'vbox',
+                        align: 'stretch'
+                    },
+                    items: [
+                        {
+                            xtype: 'fieldset',
+                            flex: 1,
+                            title: 'Items Information',
+                            layout: 'anchor',
+                            autoScroll: true,
+                            defaults: {
+                                anchor: '100%',
+                                xtype: 'displayfield',
+                             
+                            },
+                            items: [
+                                {
+                                    fieldLabel: 'Item Name',
+                                    value : currentUser.items_name
+                                },
+                                {
+                                    fieldLabel: 'UoM',
+                                    value : currentUser.UoM
+                                },
+                                {
+                                    fieldLabel: 'Price',
+                                    value : currentUser.price
+                                },
+                                {
+                                    fieldLabel: 'Brand',
+                                    value : currentUser.brand
+                                },
+                                {
+                                    fieldLabel: 'tax',
+                                    value : currentUser.tax
+                                },
+                                {
+                                    fieldLabel: 'Model',
+                                    value : currentUser.model
+                                },
+                                {
+                                    fieldLabel: 'make',
+                                    value: currentUser.make
+                                },
+                                {
+                                    fieldLabel: 'Description',
+                                    value: currentUser.description
+                                }
+                            ]
+                        },
+                        {
+                            xtype: 'fieldset',
+                            title: 'Photo',
+                            width: 170,
+                            items: [
+                                {
+                                    xtype: 'image',
+                                    reference: 'userPicture',
+                                    height: 150,
+                                    width: 150,
+                                    bind:{
+                                        src: 'resources/itemImages/'+currentUser.image
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+        });
+        what.show();
+    },
     onButtonToggleClearGrouping: function (button, pressed, options) {
 
         var store = button.up('citiesgrid').getStore();
@@ -155,5 +238,5 @@ Ext.define('PCEPR.controller.StaticData', {
         view.on('itemupdate', function (record, index, node, options) {
             grid.validateRow(record, index, node, options);
         });
-    }
+    },
 });
