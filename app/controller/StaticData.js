@@ -42,12 +42,15 @@ Ext.define('PCEPR.controller.StaticData', {
             },
             'citiesgrid button#clearGrouping': {
                 toggle: me.onButtonToggleClearGrouping
+            },
+            'staticdatagrid button#backupitems': {
+                click : me.onButtonClickBackupItems
             }
         });
 
         me.listen({
             store: {
-                '#staticData.Base': {
+                '#staticData.Items': {
                     write: me.onStoreSync
                 }
             }
@@ -118,7 +121,20 @@ Ext.define('PCEPR.controller.StaticData', {
     onButtonClickClearFilter: function (button, e, options) {
         button.up('staticdatagrid').filters.clearFilters();
     },
+    onButtonClickBackupItems : function(button, e, options){
+        var grid = button.up('staticdatagrid');
+        var table = grid.title;
+        console.log(table);
+        Ext.Ajax.request({
+            type : "POST",
+            url : 'php/backupdata/export.php',
+            data: table,
+            // success : function(){
+            //     console.log("database backup done");
+            // }
+        })
 
+    },
 
     onWidgetClick: function (grid, button) {
 
@@ -126,6 +142,7 @@ Ext.define('PCEPR.controller.StaticData', {
             rec = button.getWidgetRecord();
         store.remove(rec);
         Ext.Msg.alert('Delete', 'Save the changes to persist the removed record.');
+        // store.sync();
     },
     onWidgetClickView: function (grid, button) {
         var rec = button.getWidgetRecord();
@@ -161,7 +178,6 @@ Ext.define('PCEPR.controller.StaticData', {
                             defaults: {
                                 anchor: '100%',
                                 xtype: 'displayfield',
-                             
                             },
                             items: [
                                 {
@@ -206,8 +222,8 @@ Ext.define('PCEPR.controller.StaticData', {
                                 {
                                     xtype: 'image',
                                     reference: 'userPicture',
-                                    height: 150,
-                                    width: 150,
+                                    height: 170,
+                                    width: 700,
                                     bind:{
                                         src: 'resources/itemImages/'+currentUser.image
                                     }

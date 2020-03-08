@@ -71,8 +71,20 @@ Ext.define('PCEPR.view.staticData.BaseGrid', {
                     },
                     {
                         xtype: 'button',
+                        itemId: 'restoredata',
+                        text: 'Restore Data From',
+                        glyph: PCEPR.util.Glyphs.getGlyph('restore')
+                    },
+                    {
+                        xtype: 'button',
+                        itemId: 'backupitems',
+                        text: 'Backup Data',
+                        glyph: PCEPR.util.Glyphs.getGlyph('backup')
+                    },
+                    {
+                        xtype: 'button',
                         itemId: 'importitems',
-                        text: 'Import Items From Excel',
+                        text: 'Import Data From Excel',
                         glyph: PCEPR.util.Glyphs.getGlyph('importitems')
                     }
                 ]
