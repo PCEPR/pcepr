@@ -53,7 +53,7 @@ Ext.define('PCEPR.view.staticData.Items', {
             flex: 1,
             dataIndex: 'brand',
             editor: {
-                allowBlank: true,
+                allowBlank: false,
                 maxLength: 100
             },
             filter: {
@@ -103,7 +103,7 @@ Ext.define('PCEPR.view.staticData.Items', {
             hidden: true,
             dataIndex: 'make',
             editor: {
-                allowBlank: true,
+                allowBlank: false,
                 maxLength: 100
             },
             filter: {

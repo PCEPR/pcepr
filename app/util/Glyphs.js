@@ -10,9 +10,7 @@ Ext.define('PCEPR.util.Glyphs', {
         saveAll: 'xf0c7',
         clearFilter: 'xf0b0',
         importitems: 'xf1c3',
-        view: 'xf05a',
-        backup: 'xf56e',
-        restore: 'xf56f'
+        view: 'xf05a'
     },
     constructor: function (config) { //#3
         this.initConfig(config);

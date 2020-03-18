@@ -2,7 +2,11 @@
 
 require("../db/db.php");
 
-
+session_start();
+if(empty($_SESSION["username"])) {
+    header("HTTP/1.0 403 Forbidden");
+    exit;
+}
 
 
 

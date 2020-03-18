@@ -27,7 +27,7 @@ translations = {
 	languages: 'Languages',
 	cities: 'Labours',
 	countries: 'Equipments',
-	cms: 'Cost Estimation',
+	cms: 'Content Management',
 	films: 'Panels',
 	reports: 'Reports',
 	salesfilmcategory: 'Generate report',
