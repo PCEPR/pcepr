@@ -31,6 +31,10 @@ Ext.define('PCEPR.Application', {
     stores: [
         'staticData.Items'
     ],
+    models:[
+        'security.User',
+        'security.Group'
+    ],
     launch: function () {
         Ext.tip.QuickTipManager.init();
         var me = this;
