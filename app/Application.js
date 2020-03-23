@@ -13,8 +13,6 @@ function loadLocale(){
 loadLocale();
 
 
-
-
 Ext.define('PCEPR.Application', {
     extend: 'Ext.app.Application',
     name: 'PCEPR',
@@ -23,17 +21,21 @@ Ext.define('PCEPR.Application', {
         'PCEPR.overrides.tree.ColumnOverride'
     ],
     views: [
+        'project.project'
     ],
     controllers: [
         'Menu',
-        'StaticData'
+        'StaticData',
     ],
     stores: [
-        'staticData.Items'
+        'projectData.Items',
+        'staticData.Items',
+        
     ],
     models:[
         'security.User',
-        'security.Group'
+        'security.Group',
+        'projectData.Items'
     ],
     launch: function () {
         Ext.tip.QuickTipManager.init();

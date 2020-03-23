@@ -4,7 +4,8 @@ Ext.define('PCEPR.view.menu.Accordion', {
     width: 250,
     layout: {
         type: 'accordion',
-        multi: true
+        animate: true,
+        fill: true
     },
     collapsible: true,
     split: true,

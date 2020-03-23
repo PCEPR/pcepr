@@ -4,7 +4,6 @@ Ext.define('PCEPR.view.staticData.BaseGrid', {
 
     requires: [
         'PCEPR.util.Glyphs',
-        // 'PCEPR.overrides.grid.column.Action'
     ],
 
     columnLines: true,

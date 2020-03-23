@@ -7,21 +7,26 @@ require("../db/db.php");
 //         $data[] = $profile;
 //     }
 // }
-if ($_GET['node'] == 'root'){
-    $parent_id = 0;
-} else {
-    $parent_id = $_GET['node'];
+$sql = "SELECT * FROM project";
+
+
+$result = array();
+
+if ($resultdb = $mysqli->query($sql)) {
+
+    while($profile = $resultdb->fetch_assoc()) {
+        $result[] = $profile;
+    }
+
+    $resultdb->close();
 }
-$query = "SELECT * FROM mytree WHERE parent_id='".$parent_id."' ORDER BY text ASC";
 
-$rs = $mysqli->query($query);
-$arr = array();
+echo json_encode(array(
+    "success" => $mysqli->connect_errno == 0,
+    "data" => $result
+));
 
-while($boj = $rs->fetch_assoc()){
-    $arr[] = $boj;
-}
-
-echo json_encode( $arr);
-// $mysqli->close();
+/* close connection */
+$mysqli->close();
 
 ?>

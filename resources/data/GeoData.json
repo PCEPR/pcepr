@@ -1,0 +1,20 @@
+{
+    "children": [{
+        "mtype": "Territory",
+        "name": "North America",
+        "leaf": false,
+        "children" :[{
+            "mtype": "Country",
+            "name": "USA",
+            "children": [{
+                "mtype": "City",
+                "name": "Redwood City",
+                "leaf": true
+            }, {
+                "mtype": "City",
+                "name": "Frederick, MD",
+                "leaf": true
+            }]
+        }]
+    }]
+}
