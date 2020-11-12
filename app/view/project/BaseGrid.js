@@ -10,7 +10,12 @@ Ext.define('PCEPR.view.project.BaseGrid', {
     viewConfig: {
         stripeRows: true
     },
-
+      plugins: [
+    {
+      ptype: 'rowexpander',
+      rowBodyTpl: ['<b>Description:</b> {Description}</br>'],
+    },
+  ],
     initComponent: function () {
         var me = this;
 
@@ -69,7 +74,7 @@ Ext.define('PCEPR.view.project.BaseGrid', {
                     widget: {
                         xtype: 'button',
                         glyph: PCEPR.util.Glyphs.getGlyph('edit'),
-                        tooltip: 'Edit Project',
+                        tooltip: 'Edit',
                         scope: me,
                         handler: function (btn) {
                             me.fireEvent('widgetclickedit', me, btn);

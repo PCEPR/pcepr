@@ -16,10 +16,11 @@ translations = {
 	//Menus
 	menu:'menu',
 	menu1 : 'Security',
-	menu11 : 'Groups Or Roles',
+	menu11 : 'Groups',
 	menu111 : 'Permissions',
+	menu112 : 'Profile',
+	menu113 : 'Roles',
 	menu12 : 'Users',
-	menu13 : 'Profile',
 
 	staticData: 'Static Data',
 	actors: 'Items',

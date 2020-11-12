@@ -29,7 +29,7 @@ Ext.define('PCEPR.view.locale.Translation', {
             {
                 xtype: 'menuitem',
                 iconCls: 'pt_BR',
-                text: 'Português'
+                text: 'Afan Oromo'
             }
         ]
     }
